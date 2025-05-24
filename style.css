@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.clock{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 15px 10px 20px 7px rgba(79, 77, 77, 0.5);
+    
+   
+}
+.sun{
+    position:absolute;
+    top:5%;
+    left:90% ;
+    font-size: 2.2rem;
+}
+
+.class{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--n)));
+    inset: 20px;
+    text-align: center;
+    font-size: 40px;
+    color:#000;
+   }
+   .class b{
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+
+   }
+
+   .center-po{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+   }
+
+   .hours-hand,.minute-hand,.second-hand{
+    background-color: #fff;
+    --rotate: 0;
+    position: absolute;
+    left:50%;
+    bottom:50%;
+    transform: translate(-50%) rotate(calc(var(--rotate)*1deg));
+    transform-origin: bottom;
+
+   }
+   .hours-hand{
+    height: 130px;
+    width: 10px;
+   background: #000;
+
+   }
+   .second-hand{
+    height: 210px;
+    width: 4px;
+    background-color: red;
+
+   }
+
+   .minute-hand{
+    height:190px ;
+width:10px;
+background:#000;
+   }
